@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment - AsherCribs DentalClinic</title>
+  <link rel="icon" type="image/webp" href="pfp.webp">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    :root {
+      --primary: #3a1453;
+      --primary-light: #c179fc;
+      --text-light: #ddb9fb;
+      --radius: 10px;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--primary);
+      color: var(--text-light);
+    }
+
+    .bg-fade {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+      background: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    main, header, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .navbar {
+      background-color: var(--primary-light);
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-light);
+      margin-bottom: 2rem;
+    }
+
+    .modern-form {
+      max-width: 450px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      background-color: var(--primary-light);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .modern-form input,
+    .modern-form select,
+    .modern-form textarea {
+      padding: 0.8rem;
+      border-radius: var(--radius);
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .btn {
+      background-color: #1e7c3e;
+      color: white;
+      padding: 0.9rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: var(--primary-light);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-fade"></div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="pfp.webp" alt="AsherCribs DentalClinic  Logo" style="height:2.2rem;vertical-align:middle;margin-right:0.7rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+        AsherCribs DentalClinic
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="book.html">Book Appointment</a></li>
+        <li><a href="login.html">Patient Login</a></li>
+        <li><a href="staff.html">Staff Portal</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Book an Appointment</h1>
+      <form class="modern-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="date" required>
+        <select required>
+          <option value="">Select Service</option>
+          <option value="cleaning">Teeth Cleaning</option>
+          <option value="whitening">Teeth Whitening</option>
+          <option value="extraction">Tooth Extraction</option>
+          <option value="checkup">General Checkup</option>
+        </select>
+        <textarea placeholder="Additional Notes (optional)" rows="3"></textarea>
+        <button type="submit" class="btn">Book Appointment</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AsherCribs DentalClinic. All rights reserved.</p>
+  </footer>
+</body>
+</html>

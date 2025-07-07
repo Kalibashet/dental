@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - AsherCribs DentalClinic</title>
+    <link rel="icon" type="image/webp" href="pfp.webp">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: #f5eaff;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .center-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            height: 100vh;
+        }
+        .split-card {
+            display: flex;
+            width: 100%;
+            max-width: 900px;
+            min-height: 400px;
+            height: 100vh;
+            max-height: 100vh;
+            background: #fff;
+            border-radius: 2rem;
+            box-shadow: 0 12px 40px 0 rgba(162,89,230,0.13), 0 1.5px 8px 0 rgba(80,0,120,0.07);
+            overflow: hidden;
+        }
+        .split-left, .split-right {
+            width: 50%;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .split-left {
+            background: #fff;
+            padding: 2.5rem 2rem 7rem 2rem;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+        .logo-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+        .logo-form img {
+            width: 60px;
+            height: 60px;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 12px rgba(162,89,230,0.13);
+            margin-bottom: 0.5rem;
+        }
+        .login-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+            text-align: center;
+        }
+        .login-sub {
+            color: #888;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+        .modern-form {
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+        .input-group {
+            position: relative;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+            border-radius: 0.9rem;
+            border: 1.5px solid #e0c3fc;
+            font-size: 1rem;
+            background: #f8f6ff;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+        .input-group input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px #e0c3fc;
+        }
+        .input-group .icon {
+            position: absolute;
+            left: 0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-size: 1.1rem;
+            opacity: 0.7;
+        }
+        .form-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.98rem;
+            margin-top: 0.2rem;
+            display: inline-block;
+        }
+        .form-link:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .btn {
+            width: 100%;
+            background: var(--primary);
+            border-radius: 0.9rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 0.8rem 0;
+        }
+        .split-right {
+            position: relative;
+            width: 50%;
+            height: 100vh;
+            min-height: 300px;
+            padding: 0;
+            margin: 0;
+            background: none;
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
+            overflow: hidden;
+        }
+        .split-right img {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            display: block;
+            z-index: 1;
+        }
+        @media (max-width: 900px) {
+            .split-card {
+                flex-direction: column;
+                height: auto;
+                min-height: unset;
+                max-width: 98vw;
+            }
+            .split-left, .split-right {
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                height: auto;
+            }
+            .split-right {
+                min-height: 180px;
+                border-radius: 0 0 1.5rem 1.5rem;
+            }
+        }
+        .bg-fade {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 0;
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+            opacity: 0.13;
+            pointer-events: none;
+        }
+        main, header, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-fade"></div>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="pfp.webp" alt="Dental Clinic Logo" style="height:2.2rem;vertical-align:middle;margin-right:0.7rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);">AsherCribs DentalClinic Logo</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="book.html">Book Appointment</a></li>
+                <li><a href="login.html">Patient Login</a></li>
+                <li><a href="staff.html">Staff Portal</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="center-container">
+        <div class="split-card">
+            <div class="split-left">
+                <div class="logo-form">
+                    <img src="pfp.webp" alt="Dental Clinic Logo">
+                    <div class="login-title">Sign Up</div>
+                    <div class="login-sub">Create your account to book appointments</div>
+                </div>
+                <form id="registerForm" class="modern-form">
+                    <div class="input-group">
+                        <span class="icon"><i class="fa-regular fa-user"></i></span>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <input type="text" placeholder="Address" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" placeholder="Create Password" required>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <div id="successMsg" style="display:none; text-align:center; color:var(--primary); font-weight:600; margin-top:1.5rem; font-size:1.1rem; animation: fadeIn 1.2s ease;">Registration successful! Redirecting to login page...</div>
+                <div style="margin-top:2rem; text-align:center; color:#888; font-size:1rem;">Already have an account? <a href="login.html" class="form-link">Log in</a></div>
+                <script>
+                    document.getElementById('registerForm').onsubmit = function(e) {
+                        e.preventDefault();
+                        document.getElementById('registerForm').style.display = 'none';
+                        document.getElementById('successMsg').style.display = 'block';
+                        setTimeout(function() {
+                            window.location.href = 'login.html';
+                        }, 10000);
+                    };
+                </script>
+            </div>
+            <div class="split-right">
+                <img src="assets/login.jpg" alt="Register Visual" />
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Dental Clinic. All rights reserved.</p>
+    </footer>
+</body>
+</html>

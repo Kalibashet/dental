@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - AsherCribs DentalClinic</title>
+    <link rel="icon" type="image/webp" href="pfp.webp">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="bg-fade"></div>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="pfp.webp" alt="Dental Clinic Logo" style="height:2.2rem;vertical-align:middle;margin-right:0.7rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);">AsherCribs DentalClinic Logo</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="book.html">Book Appointment</a></li>
+                <li><a href="login.html">Patient Login</a></li>
+                <li><a href="staff.html">Staff</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="fade-in-section">
+            <h1 style="text-align:center; color:var(--primary); margin-bottom:1.5rem;">Our Dental Services</h1>
+            <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
+                <div class="service-card">
+                    <img class="service-img" src="assets/teeth cleaning.webp" alt="Teeth Cleaning">
+                    <div class="service-content">
+                        <h3>Teeth Cleaning</h3>
+                        <p>Professional cleaning to remove plaque, tartar, and stains for a healthy smile.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img class="service-img" src="assets/teeth whitening.jpg" alt="Teeth Whitening">
+                    <div class="service-content">
+                        <h3>Teeth Whitening</h3>
+                        <p>Brighten your teeth with safe and effective whitening treatments.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img class="service-img" src="assets/tooth extraction.jpg" alt="Tooth Extraction">
+                    <div class="service-content">
+                        <h3>Tooth Extraction</h3>
+                        <p>Gentle and safe removal of problematic teeth with minimal discomfort.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img class="service-img" src="assets/general checkup.jpg" alt="General Checkup">
+                    <div class="service-content">
+                        <h3>General Checkup</h3>
+                        <p>Comprehensive exams to assess and maintain your oral health.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img class="service-img" src="assets/braces and orthordontics.jpeg" alt="Braces & Orthodontics">
+                    <div class="service-content">
+                        <h3>Braces & Orthodontics</h3>
+                        <p>Straighten your teeth and improve your bite with modern orthodontic solutions.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img class="service-img" src="assets/pediatric dentistry.png" alt="Pediatric Dentistry">
+                    <div class="service-content">
+                        <h3>Pediatric Dentistry</h3>
+                        <p>Gentle dental care for children in a friendly, welcoming environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dental Clinic. All rights reserved.</p>
+    </footer>
+    <style>
+    .bg-fade {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 0;
+        background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+        opacity: 0.13;
+        pointer-events: none;
+    }
+    main, header, footer {
+        position: relative;
+        z-index: 1;
+    }
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        background: var(--primary-light);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        max-width: 300px;
+        min-width: 220px;
+        flex: 1 1 220px;
+        overflow: hidden;
+        height: 370px;
+        margin-bottom: 1.5rem;
+    }
+    .service-img {
+        width: 100%;
+        height: 50%;
+        min-height: 120px;
+        object-fit: cover;
+        display: block;
+    }
+    .service-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.2rem 1rem 1rem 1rem;
+    }
+    .service-content h3 {
+        color: var(--primary);
+        margin: 0.5rem 0 0.7rem 0;
+    }
+    .service-content p {
+        color: var(--text-light);
+        font-size: 1rem;
+    }
+    </style>
+</body>
+</html>

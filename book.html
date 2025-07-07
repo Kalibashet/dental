@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment - AsherCribs DentalClinic</title>
+  <link rel="icon" type="image/webp" href="pfp.webp" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .bg-fade {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+      background: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+      opacity: 0.13;
+      pointer-events: none;
+    }
+    main, header, footer {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-fade"></div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="pfp.webp" alt="AsherCribs DentalClinic Logo" style="height:2.2rem;vertical-align:middle;margin-right:0.7rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);" />
+        AsherCribs DentalClinic
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="book.html">Book Appointment</a></li>
+        <li><a href="login.html">Patient Login</a></li>
+        <li><a href="staff.html">Staff Portal</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1 style="text-align:center; color:var(--primary); margin-bottom:1.5rem;">Book an Appointment</h1>
+      <form action="/submit" method="POST" class="modern-form" style="max-width:400px; margin:0 auto; display:flex; flex-direction:column; gap:1.2rem;">
+        <input name="fullName" type="text" placeholder="Full Name" required style="padding:0.8rem; border-radius:var(--radius); border:1px solid #ddd; font-size:1rem;" />
+        <input name="email" type="email" placeholder="Email Address" required style="padding:0.8rem; border-radius:var(--radius); border:1px solid #ddd; font-size:1rem;" />
+        <input name="phone" type="tel" placeholder="Phone Number" required style="padding:0.8rem; border-radius:var(--radius); border:1px solid #ddd; font-size:1rem;" />
+        <input name="date" type="date" required style="padding:0.8rem; border-radius:var(--radius); border:1px solid #ddd; font-size:1rem;" />
+        <select name="service" required style="padding:0.8rem; border-radius:var(--radius); border:1px solid #ddd; font-size:1rem;">
+          <option value="">Select Service</option>
+          <option value="Teeth Cleaning">Teeth Cleaning</option>
+          <option value="Teeth Whitening">Teeth Whitening</option>
+          <option value="Tooth Extraction">Tooth Extraction</option>
+          <option value="General Checkup">General Checkup</option>
+        </select>
+        <textarea name="notes" placeholder="Additional Notes (optional)" rows="3" style="padding:0.8rem; border-radius:var(--radius); border:1px solid #ddd; font-size:1rem;"></textarea>
+        <button type="submit" class="btn" style="width:100%;">Book Appointment</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Dental Clinic. All rights reserved.</p>
+  </footer>
+</body>
+</html>
